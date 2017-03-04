@@ -32,7 +32,7 @@
   },
   "software": {
     "base": {
-      "name": "engines_design_s",
+      "name": "enginesdesigns",
       "framework": "rails5",
       "memory": {
         "required": 390,
