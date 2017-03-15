@@ -36,11 +36,11 @@
       "name": "enginesdesigns",
       "framework": "rails5",
       "memory": {
-        "required": 390,
-        "recommended": 484
+        "required": "390",
+        "recommended": "580"
       },
       "http_protocol": "https_only",
-      "framework_port_override": 0,
+      "framework_port_override": "0",
       "deployment_type": "web",
       "web_root_directory": "",
       "continuous_deployment": true,
@@ -120,24 +120,24 @@
         "name": "Engines_Debug_Run",
         "value": "true",
         "mandatory": false,
+        "immutable": false,
         "ask_at_build_time": false,
         "build_time_only": false,
-        "immutable": false,
         "input": {
-          "label": "",
           "type": "boolean",
+          "label": "",
           "title": "",
           "comment": "",
           "hint": "",
           "placeholder": "",
-          "collection": {
-            "items": {
-            },
-            "include_blank": false
-          },
           "validation": {
             "pattern": "",
             "message": ""
+          },
+          "collection": {
+            "include_blank": false,
+            "items": {
+            }
           }
         }
       },
@@ -145,24 +145,24 @@
         "name": "GIT_SSH_COMMAND",
         "value": "\"ssh -i /home/home_dir/.ssh/identity\"",
         "mandatory": false,
+        "immutable": false,
         "ask_at_build_time": false,
         "build_time_only": false,
-        "immutable": false,
         "input": {
-          "label": "",
           "type": "string",
+          "label": "",
           "title": "",
           "comment": "",
           "hint": "",
           "placeholder": "",
-          "collection": {
-            "items": {
-            },
-            "include_blank": false
-          },
           "validation": {
             "pattern": "",
             "message": ""
+          },
+          "collection": {
+            "include_blank": false,
+            "items": {
+            }
           }
         }
       },
@@ -170,24 +170,24 @@
         "name": "full_name",
         "value": "",
         "mandatory": false,
+        "immutable": false,
         "ask_at_build_time": true,
         "build_time_only": false,
-        "immutable": false,
         "input": {
-          "label": "git config full name",
           "type": "string",
+          "label": "git config full name",
           "title": "",
           "comment": "",
           "hint": "",
           "placeholder": "",
-          "collection": {
-            "items": {
-            },
-            "include_blank": false
-          },
           "validation": {
             "pattern": "",
             "message": ""
+          },
+          "collection": {
+            "include_blank": false,
+            "items": {
+            }
           }
         }
       },
@@ -195,24 +195,24 @@
         "name": "email",
         "value": "",
         "mandatory": false,
+        "immutable": false,
         "ask_at_build_time": true,
         "build_time_only": false,
-        "immutable": false,
         "input": {
-          "label": "git config email",
           "type": "string",
+          "label": "git config email",
           "title": "",
           "comment": "",
           "hint": "",
           "placeholder": "",
-          "collection": {
-            "items": {
-            },
-            "include_blank": false
-          },
           "validation": {
             "pattern": "",
             "message": ""
+          },
+          "collection": {
+            "include_blank": false,
+            "items": {
+            }
           }
         }
       }
