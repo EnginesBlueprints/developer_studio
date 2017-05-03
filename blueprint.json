@@ -14,8 +14,7 @@
         "minor": 0,
         "level": "beta",
         "patch": 1
-      },
-      "timestamp": null
+      }
     },
     "software": {
       "display": {
@@ -29,21 +28,22 @@
         "label": "Apache v2",
         "url": ""
       }
-    }
+    },
+    "timestamp": "2017-05-03 04:53:08 UTC"
   },
   "software": {
     "base": {
       "name": "enginesdesigns",
       "framework": "rails5",
-      "memory": {
-        "required": "390",
-        "recommended": "580"
-      },
-      "http_protocol": "https_only",
-      "framework_port_override": "0",
       "deployment_type": "web",
+      "http_protocol": "https_only",
+      "framework_port_override": 0,
       "web_root_directory": "",
       "continuous_deployment": true,
+      "memory": {
+        "required": 390,
+        "recommended": 580
+      },
       "install_form_comment": "",
       "first_run_url": "",
       "installation_report": ""
@@ -120,49 +120,49 @@
         "name": "Engines_Debug_Run",
         "value": "true",
         "mandatory": false,
-        "immutable": false,
         "ask_at_build_time": false,
         "build_time_only": false,
+        "immutable": false,
         "input": {
-          "type": "boolean",
           "label": "",
+          "type": "boolean",
           "title": "",
           "comment": "",
           "hint": "",
           "placeholder": "",
+          "collection": {
+            "items": {
+            },
+            "include_blank": false
+          },
           "validation": {
             "pattern": "",
             "message": ""
-          },
-          "collection": {
-            "include_blank": false,
-            "items": {
-            }
           }
         }
       },
       {
         "name": "GIT_SSH_COMMAND",
-        "value": "\"ssh -i /home/home_dir/.ssh/identity\"",
+        "value": "ssh -i /home/home_dir/.ssh/identity",
         "mandatory": false,
-        "immutable": false,
         "ask_at_build_time": false,
         "build_time_only": false,
+        "immutable": false,
         "input": {
-          "type": "string",
           "label": "",
+          "type": "string",
           "title": "",
           "comment": "",
           "hint": "",
           "placeholder": "",
+          "collection": {
+            "items": {
+            },
+            "include_blank": false
+          },
           "validation": {
             "pattern": "",
             "message": ""
-          },
-          "collection": {
-            "include_blank": false,
-            "items": {
-            }
           }
         }
       },
@@ -170,24 +170,24 @@
         "name": "full_name",
         "value": "",
         "mandatory": false,
-        "immutable": false,
         "ask_at_build_time": true,
         "build_time_only": false,
+        "immutable": false,
         "input": {
-          "type": "string",
           "label": "git config full name",
+          "type": "string",
           "title": "",
           "comment": "",
           "hint": "",
           "placeholder": "",
+          "collection": {
+            "items": {
+            },
+            "include_blank": false
+          },
           "validation": {
             "pattern": "",
             "message": ""
-          },
-          "collection": {
-            "include_blank": false,
-            "items": {
-            }
           }
         }
       },
@@ -195,24 +195,24 @@
         "name": "email",
         "value": "",
         "mandatory": false,
-        "immutable": false,
         "ask_at_build_time": true,
         "build_time_only": false,
+        "immutable": false,
         "input": {
-          "type": "string",
           "label": "git config email",
+          "type": "string",
           "title": "",
           "comment": "",
           "hint": "",
           "placeholder": "",
+          "collection": {
+            "items": {
+            },
+            "include_blank": false
+          },
           "validation": {
             "pattern": "",
             "message": ""
-          },
-          "collection": {
-            "include_blank": false,
-            "items": {
-            }
           }
         }
       }
@@ -246,11 +246,11 @@
       }
     ],
     "components": {
+      "path": "",
+      "extract": false,
       "sources": [
 
-      ],
-      "path": "",
-      "extract": false
+      ]
     },
     "workers": {
       "blocking": "",
