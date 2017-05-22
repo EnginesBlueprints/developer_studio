@@ -20,16 +20,13 @@
       "display": {
         "title": "designstudio",
         "label": "Engines Design Studio",
-        "version": "",
-        "description": "Engines Design Studio",
-        "url": ""
+        "description": "Engines Design Studio"
       },
       "license": {
-        "label": "Apache v2",
-        "url": ""
+        "label": "Apache v2"
       }
     },
-    "timestamp": "2017-05-03 04:53:08 UTC"
+    "timestamp": "2017-05-03T04:53:08+00:00"
   },
   "software": {
     "base": {
@@ -38,19 +35,12 @@
       "deployment_type": "web",
       "http_protocol": "https_only",
       "framework_port_override": 0,
-      "web_root_directory": "",
       "continuous_deployment": true,
       "memory": {
         "required": 390,
         "recommended": 580
-      },
-      "install_form_comment": "",
-      "first_run_url": "",
-      "installation_report": ""
+      }
     },
-    "ports": [
-
-    ],
     "scripts": {
       "start": {
         "language": "sh",
@@ -61,31 +51,20 @@
         "content": "#!/bin/bash\r\n#ln -s ~/.ssh /home/app/\r\nmkdir -p /home/app/.ssh/\r\n#fake so rake doesn't die on db:mirgrate (ask developer why)\r\n\r\nmkdir -p /home/home_dir/.ssh/\r\nssh-keygen -f /home/home_dir/.ssh/identity\r\n"
       },
       "post_install": {
-        "language": "sh",
-        "content": ""
+        "language": "sh"
       },
       "shutdown": {
-        "language": "sh",
-        "content": ""
+        "language": "sh"
       }
     },
-    "external_repositories": [
-
-    ],
-    "system_packages": [
-
-    ],
     "installed_packages": [
       {
         "name": "developer_studio",
-        "source_url": "https://github.com/lachdoug/developer_studio",
+        "source": "https://github.com/lachdoug/developer_studio",
         "destination": "./",
         "extraction_command": "git",
         "path_to_extracted": "developer_studio"
       }
-    ],
-    "required_modules": [
-
     ],
     "service_configurations": [
       {
@@ -119,101 +98,31 @@
       {
         "name": "Engines_Debug_Run",
         "value": "true",
-        "mandatory": false,
-        "ask_at_build_time": false,
-        "build_time_only": false,
-        "immutable": false,
         "input": {
-          "label": "",
-          "type": "boolean",
-          "title": "",
-          "comment": "",
-          "hint": "",
-          "placeholder": "",
-          "collection": {
-            "items": {
-            },
-            "include_blank": false
-          },
-          "validation": {
-            "pattern": "",
-            "message": ""
-          }
+          "type": "boolean"
         }
       },
       {
         "name": "GIT_SSH_COMMAND",
         "value": "ssh -i /home/home_dir/.ssh/identity",
-        "mandatory": false,
-        "ask_at_build_time": false,
-        "build_time_only": false,
-        "immutable": false,
         "input": {
-          "label": "",
-          "type": "string",
-          "title": "",
-          "comment": "",
-          "hint": "",
-          "placeholder": "",
-          "collection": {
-            "items": {
-            },
-            "include_blank": false
-          },
-          "validation": {
-            "pattern": "",
-            "message": ""
-          }
+          "type": "string"
         }
       },
       {
         "name": "full_name",
-        "value": "",
-        "mandatory": false,
         "ask_at_build_time": true,
-        "build_time_only": false,
-        "immutable": false,
         "input": {
-          "label": "git config full name",
           "type": "string",
-          "title": "",
-          "comment": "",
-          "hint": "",
-          "placeholder": "",
-          "collection": {
-            "items": {
-            },
-            "include_blank": false
-          },
-          "validation": {
-            "pattern": "",
-            "message": ""
-          }
+          "label": "git config full name"
         }
       },
       {
         "name": "email",
-        "value": "",
-        "mandatory": false,
         "ask_at_build_time": true,
-        "build_time_only": false,
-        "immutable": false,
         "input": {
-          "label": "git config email",
           "type": "string",
-          "title": "",
-          "comment": "",
-          "hint": "",
-          "placeholder": "",
-          "collection": {
-            "items": {
-            },
-            "include_blank": false
-          },
-          "validation": {
-            "pattern": "",
-            "message": ""
-          }
+          "label": "git config email"
         }
       }
     ],
@@ -224,17 +133,9 @@
         "content": "[user]\r\n        email = _Engines_Environment(email)\r\n        name = _Engines_Environment(full_name)\r\n"
       }
     ],
-    "replacement_strings": [
-
-    ],
     "database_seed": {
-      "language": "text",
-      "content": "",
-      "script": false
+      "language": "text"
     },
-    "file_write_permissions": [
-
-    ],
     "persistent_directories": [
       {
         "path": "app/repos"
@@ -245,43 +146,16 @@
         "path": "app/config/custom_dropdowns.yml"
       }
     ],
-    "components": {
-      "path": "",
-      "extract": false,
-      "sources": [
-
+    "framework_specific": {
+      "rake_tasks": [
+        {
+          "action": "db:migrate",
+          "always_run": true
+        },
+        {
+          "action": "db:seed"
+        }
       ]
-    },
-    "workers": {
-      "blocking": "",
-      "commands": [
-
-      ]
-    },
-    "rake_tasks": [
-      {
-        "action": "db:migrate",
-        "always_run": true
-      },
-      {
-        "action": "db:seed",
-        "always_run": false
-      }
-    ],
-    "custom_php_inis": [
-
-    ],
-    "apache_htaccess_files": [
-
-    ],
-    "apache_httpd_configurations": [
-
-    ],
-    "actionators": [
-
-    ],
-    "schedules": [
-
-    ]
+    }
   }
 }
