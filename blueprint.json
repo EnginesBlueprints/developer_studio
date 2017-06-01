@@ -60,7 +60,7 @@
     "installed_packages": [
       {
         "name": "developer_studio",
-        "source": "https://github.com/lachdoug/developer_studio",
+        "source_url": "https://github.com/lachdoug/developer_studio",
         "destination": "./",
         "extraction_command": "git",
         "path_to_extracted": "developer_studio"
