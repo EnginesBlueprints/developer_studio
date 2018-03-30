@@ -155,15 +155,7 @@
       }
     ],
     "framework_specific": {
-      "rake_tasks": [
-        {
-          "action": "db:migrate",
-          "always_run": true
-        },
-        {
-          "action": "db:seed"
-        }
-      ]
+      "rake_tasks": []
     }
   }
 }
